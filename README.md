@@ -1,12 +1,15 @@
 # Jotion
 
-Jotion is a clone of the popular note-taking application Notion. It's built with Next.js as a learning exercise, following a tutorial on YouTube.
+Jotion is a clone of the popular note-taking application Notion. It's built with Next.js as a learning exercise,
+following a tutorial on YouTube.
 
 You can view the live version of the project [here](https://jotion-osadhi.vercel.app/).
 
 ## About This Project
 
-This project is a fun experiment to create a functional clone of Notion, a popular note-taking and productivity application. If you're looking to understand how to build complex applications using Next.js, then examining the code of this project might be a good start.
+This project is a fun experiment to create a functional clone of Notion, a popular note-taking and productivity
+application. If you're looking to understand how to build complex applications using Next.js, then examining the code of
+this project might be a good start.
 
 ## Built With
 
@@ -23,7 +26,8 @@ For a complete list of the dependencies, refer to the `package.json` file.
 
 ## Getting Started
 
-Firstly, you need Node.js and npm(you can use Yarn too) installed in your system. You can download Node.js from https://nodejs.org/ and npm is included in the Node.js installation.
+Firstly, you need Node.js and npm(you can use Yarn too) installed in your system. You can download Node.js
+from https://nodejs.org/ and npm is included in the Node.js installation.
 
 ### Clone the Repository
 
@@ -41,6 +45,7 @@ Navigate to the project directory and install the dependencies:
 cd jotion
 npm install
 ```
+
 ### Running Jotion
 
 You can start the development server using:
@@ -48,15 +53,17 @@ You can start the development server using:
 ```bash
 npm run dev
 ```
+
 Then open http://localhost:3000 with your browser to see Jotion working in action.
 
 ## Acknowledgements
 
-This project is built by following a tutorial on YouTube and a GitHub repo. For more information, check out these resources:
+This project is built by following a tutorial on YouTube and a GitHub repo. For more information, check out these
+resources:
 
 - [YouTube Tutorial](https://www.youtube.com/watch?v=0OaDyjB9Ib8)
 - [GitHub Repository Tutorial](https://github.com/AntonioErdeljac/notion-clone-tutorial)
 
-## License 
+## License
 
 This project is licensed under the [MIT License](./LICENSE).
