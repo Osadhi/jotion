@@ -103,7 +103,7 @@ export const Item = ({
         active && "bg-primary/5 text-primary",
       )}
     >
-      {Boolean(id) && (
+      {!!id && (
         <div
           role="button"
           className="h-full rounded-sm hover:bg-neutral-300  dark:hover:bg-neutral-600 mr-1"
@@ -124,7 +124,7 @@ export const Item = ({
           <span className="text-xs">CTRL</span> + K
         </kbd>
       )}
-      {Boolean(id) && (
+      {!!id && (
         <div className="ml-auto flex items-center gap-x-2">
           <DropdownMenu>
             <DropdownMenuTrigger onClick={(e) => e.stopPropagation()} asChild>
