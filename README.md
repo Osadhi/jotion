@@ -46,6 +46,20 @@ cd jotion
 npm install
 ```
 
+### Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file:
+
+`CONVEX_DEPLOYMENT` - You can set this value as needed for your Convex deployment.
+
+`NEXT_PUBLIC_CONVEX_URL` - This should match the root URL of your Convex deployment.
+
+`NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` - Your Clerk publishable key, which you can find in your Clerk dashboard.
+
+`CLERK_SECRET_KEY` - Your Clerk secret key, which you can also find in your Clerk dashboard.
+
+`EDGE_STORE_ACCESS_KEY` and `EDGE_STORE_SECRET_KEY` - Your Edge Store access and secret keys.
+
 ### Running Jotion
 
 You can start the development server using:
