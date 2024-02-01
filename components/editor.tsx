@@ -30,7 +30,7 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
       onChange(JSON.stringify(editor.topLevelBlocks, null, 2));
     },
     uploadFile: handleUpload,
-  }) as BlockNoteEditor;;
+  }) as BlockNoteEditor;
 
   return (
     <div>
