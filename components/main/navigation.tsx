@@ -9,7 +9,13 @@ import {
   Settings,
   Trash,
 } from "lucide-react";
-import React, {ElementRef, useCallback, useEffect, useRef, useState} from "react";
+import React, {
+  ElementRef,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -89,7 +95,7 @@ export const Navigation = () => {
 
       setTimeout(() => setIsResetting(false), 300);
     }
-  },[isMobile]);
+  }, [isMobile]);
 
   const collapse = () => {
     if (sidebarRef.current && navbarRef.current) {
