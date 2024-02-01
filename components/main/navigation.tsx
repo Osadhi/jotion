@@ -9,25 +9,25 @@ import {
   Settings,
   Trash,
 } from "lucide-react";
-import { ElementRef, useEffect, useRef, useState } from "react";
+import React, {ElementRef, useCallback, useEffect, useRef, useState} from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { UserItem } from "@/app/(main)/_components/user-item";
+import { UserItem } from "@/components/main/user-item";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
-import { Item } from "@/app/(main)/_components/item";
+import { Item } from "@/components/main/item";
 import { toast } from "sonner";
-import { DocumentList } from "@/app/(main)/_components/document-list";
+import { DocumentList } from "@/components/main/document-list";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { TrashBox } from "@/app/(main)/_components/trash-box";
+import { TrashBox } from "@/components/main/trash-box";
 import { useSearch } from "@/hooks/use-search";
 import { useSettings } from "@/hooks/use-settings";
-import { Navbar } from "@/app/(main)/_components/navbar";
+import { Navbar } from "@/components/main/navbar";
 
 export const Navigation = () => {
   const router = useRouter();
@@ -43,14 +43,6 @@ export const Navigation = () => {
   const navbarRef = useRef<ElementRef<"div">>(null);
   const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(isMobile);
-
-  useEffect(() => {
-    isMobile ? collapse() : resetWidth();
-  }, [isMobile]);
-
-  useEffect(() => {
-    if (isMobile) collapse();
-  }, [pathname, isMobile]);
 
   const handleMouseDown = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -83,7 +75,7 @@ export const Navigation = () => {
     document.removeEventListener("mouseup", handleMouseUp);
   };
 
-  const resetWidth = () => {
+  const resetWidth = useCallback(() => {
     if (sidebarRef.current && navbarRef.current) {
       setIsCollapsed(false);
       setIsResetting(true);
@@ -97,7 +89,7 @@ export const Navigation = () => {
 
       setTimeout(() => setIsResetting(false), 300);
     }
-  };
+  },[isMobile]);
 
   const collapse = () => {
     if (sidebarRef.current && navbarRef.current) {
@@ -123,6 +115,14 @@ export const Navigation = () => {
       error: "Failed to create new note",
     });
   };
+
+  useEffect(() => {
+    isMobile ? collapse() : resetWidth();
+  }, [isMobile, resetWidth]);
+
+  useEffect(() => {
+    if (isMobile) collapse();
+  }, [pathname, isMobile]);
 
   return (
     <>

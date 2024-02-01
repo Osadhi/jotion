@@ -1,7 +1,7 @@
 "use client";
 import { UseScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
-import { Logo } from "@/app/(marketing)/_components/logo";
+import { Logo } from "@/components/marketing/logo";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useConvexAuth } from "convex/react";
 import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";

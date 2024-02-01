@@ -1,6 +1,6 @@
-import { Heading } from "@/app/(marketing)/_components/heading";
-import { Heroes } from "@/app/(marketing)/_components/heroes";
-import { Footer } from "@/app/(marketing)/_components/footer";
+import { Heading } from "@/components/marketing/heading";
+import { Heroes } from "@/components/marketing/heroes";
+import { Footer } from "@/components/marketing/footer";
 
 export default function MarketingPage() {
   return (
