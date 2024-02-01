@@ -5,6 +5,7 @@ import { Spinner } from "@/components/spinner";
 import { redirect } from "next/navigation";
 import { Navigation } from "@/app/(main)/_components/navigation";
 import { SearchCommand } from "@/components/search-command";
+import React from "react";
 
 export default function MainLayout({
   children,
