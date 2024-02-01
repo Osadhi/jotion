@@ -2,9 +2,9 @@
 
 import { useTheme } from "next-themes";
 import { useEdgeStore } from "@/lib/edgestore";
-import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
+import { BlockNoteEditor } from "@blocknote/core";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
-import "@blocknote/core/style.css";
+import "@blocknote/react/style.css";
 
 interface EditorProps {
   onChange: (value: string) => void;
@@ -23,15 +23,14 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
 
   const editor: BlockNoteEditor = useBlockNote({
     editable,
-    initialContent: 
-      initialContent 
-      ? JSON.parse(initialContent) as PartialBlock[] 
+    initialContent: initialContent
+      ? (JSON.parse(initialContent) as any)
       : undefined,
     onEditorContentChange: (editor) => {
       onChange(JSON.stringify(editor.topLevelBlocks, null, 2));
     },
-    uploadFile: handleUpload
-  })
+    uploadFile: handleUpload,
+  });
 
   return (
     <div>
