@@ -6,6 +6,7 @@ import { type DropzoneOptions, useDropzone } from "react-dropzone";
 import { twMerge } from "tailwind-merge";
 
 import { Spinner } from "./spinner";
+import Image from "next/image";
 
 const variants = {
   base: "relative rounded-md flex justify-center items-center flex-col cursor-pointer min-h-[150px] min-w-[200px] border border-dashed border-gray-400 dark:border-gray-300 transition-colors duration-200 ease-in-out",
