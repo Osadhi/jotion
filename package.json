@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@blocknote/core": "^0.10.1",
-    "@blocknote/react": "^0.10.1",
+    "@blocknote/react": "^0.11.0",
     "@clerk/nextjs": "^4.29.3",
     "@edgestore/react": "^0.1.6",
     "@edgestore/server": "^0.1.6",
@@ -25,7 +25,7 @@
     "clsx": "^2.1.0",
     "cmdk": "^0.2.0",
     "convex": "^1.7.1",
-    "emoji-picker-react": "^4.6.5",
+    "emoji-picker-react": "^4.6.7",
     "lucide-react": "^0.308.0",
     "next": "14.0.4",
     "next-themes": "^0.2.1",
