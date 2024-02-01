@@ -21,7 +21,7 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
     return response.url;
   };
 
-  const editor: BlockNoteEditor | null = useBlockNote({
+  const editor = useBlockNote({
     editable,
     initialContent: initialContent
       ? (JSON.parse(initialContent) as any)
@@ -30,7 +30,7 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
       onChange(JSON.stringify(editor.topLevelBlocks, null, 2));
     },
     uploadFile: handleUpload,
-  });
+  }) as BlockNoteEditor;;
 
   return (
     <div>
