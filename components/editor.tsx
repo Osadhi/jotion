@@ -21,7 +21,7 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
     return response.url;
   };
 
-  const editor: BlockNoteEditor = useBlockNote({
+  const editor: BlockNoteEditor | null = useBlockNote({
     editable,
     initialContent: initialContent
       ? (JSON.parse(initialContent) as any)
