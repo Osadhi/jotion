@@ -11,7 +11,7 @@
   "dependencies": {
     "@blocknote/core": "^0.11.1",
     "@blocknote/react": "^0.11.2",
-    "@clerk/nextjs": "^4.29.5",
+    "@clerk/nextjs": "^4.29.7",
     "@edgestore/react": "^0.1.6",
     "@edgestore/server": "^0.1.6",
     "@radix-ui/react-alert-dialog": "^1.0.5",
