@@ -23,7 +23,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "cmdk": "^0.2.1",
+    "cmdk": "^1.0.0",
     "convex": "^1.10.0",
     "emoji-picker-react": "^4.8.0",
     "lodash.debounce": "^4.0.8",
