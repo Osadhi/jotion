@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
-export default function Error() {
+export default function ErrorPage() {
   return (
     <div className="h-full flex flex-col items-center justify-center space-y-4">
       <Image
