@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@blocknote/core": "^0.11.1",
+    "@blocknote/core": "^0.12.1",
     "@blocknote/react": "^0.11.2",
     "@clerk/nextjs": "^4.29.7",
     "@edgestore/react": "^0.1.6",
@@ -23,7 +23,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "cmdk": "^0.2.1",
+    "cmdk": "^1.0.0",
     "convex": "^1.10.0",
     "emoji-picker-react": "^4.8.0",
     "lodash.debounce": "^4.0.8",
@@ -34,12 +34,12 @@
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
     "react-textarea-autosize": "^8.5.3",
-    "sonner": "^1.4.2",
+    "sonner": "^1.4.3",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^2.15.1",
     "zod": "^3.22.4",
-    "zustand": "^4.5.1"
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
