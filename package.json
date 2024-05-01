@@ -24,7 +24,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^1.0.0",
-    "convex": "^1.11.0",
+    "convex": "^1.11.2",
     "emoji-picker-react": "^4.9.2",
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.363.0",
