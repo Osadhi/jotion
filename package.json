@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@blocknote/core": "^0.14.0",
-    "@blocknote/react": "^0.14.1",
+    "@blocknote/react": "^0.15.3",
     "@clerk/nextjs": "^5.1.5",
     "@edgestore/react": "^0.1.6",
     "@edgestore/server": "^0.1.6",
