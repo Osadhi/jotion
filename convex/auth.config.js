@@ -1,8 +1,8 @@
 export default {
   providers: [
     {
-      domain: "https://talented-cod-43.clerk.accounts.dev",
+      domain: "https://more-longhorn-28.clerk.accounts.dev",
       applicationID: "convex",
     },
-  ],
+  ]
 };

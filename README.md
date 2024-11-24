@@ -1,9 +1,9 @@
-# Jotion
+# Nova
 
-Jotion is a clone of the popular note-taking application Notion. It's built with Next.js as a learning exercise,
+Nova is a clone of the popular note-taking application Notion. It's built with Next.js as a learning exercise,
 following a tutorial on YouTube.
 
-You can view the live version of the project [here](https://jotion-osadhi.vercel.app/).
+You can view the live version of the project [here](https://Nova-osadhi.vercel.app/).
 
 ## About This Project
 
@@ -34,7 +34,7 @@ from https://nodejs.org/ and npm is included in the Node.js installation.
 You can clone this repository using the following command:
 
 ```bash
-git clone https://github.com/Osadhi/jotion.git
+git clone https://github.com/Osadhi/Nova.git
 ```
 
 ### Installation
@@ -42,7 +42,7 @@ git clone https://github.com/Osadhi/jotion.git
 Navigate to the project directory and install the dependencies:
 
 ```bash
-cd jotion
+cd Nova
 npm install
 ```
 
@@ -60,7 +60,7 @@ To run this project, you will need to add the following environment variables to
 
 `EDGE_STORE_ACCESS_KEY` and `EDGE_STORE_SECRET_KEY` - Your Edge Store access and secret keys.
 
-### Running Jotion
+### Running Nova
 
 You can start the development server using:
 
@@ -68,7 +68,7 @@ You can start the development server using:
 npm run dev
 ```
 
-Then open http://localhost:3000 with your browser to see Jotion working in action.
+Then open http://localhost:3000 with your browser to see Nova working in action.
 
 ## Acknowledgements
 

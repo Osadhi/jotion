@@ -6,7 +6,6 @@ import { type DropzoneOptions, useDropzone } from "react-dropzone";
 import { twMerge } from "tailwind-merge";
 
 import { Spinner } from "./spinner";
-import Image from "next/image";
 
 const variants = {
   base: "relative rounded-md flex justify-center items-center flex-col cursor-pointer min-h-[150px] min-w-[200px] border border-dashed border-gray-400 dark:border-gray-300 transition-colors duration-200 ease-in-out",
@@ -20,8 +19,6 @@ const variants = {
 };
 
 type InputProps = {
-  width?: number;
-  height?: number;
   className?: string;
   value?: File | string;
   onChange?: (file?: File) => void | Promise<void>;
@@ -45,20 +42,28 @@ const ERROR_MESSAGES = {
 };
 
 const SingleImageDropzone = React.forwardRef<HTMLInputElement, InputProps>(
-  (
-    { dropzoneOptions, width, height, value, className, disabled, onChange },
-    ref,
-  ) => {
+  ({ dropzoneOptions, value, className, disabled, onChange }, ref) => {
+    const [dimensions, setDimensions] = React.useState({ width: 0, height: 0 });
+    const imageRef = React.useRef<HTMLImageElement>(null);
+
     const imageUrl = React.useMemo(() => {
       if (typeof value === "string") {
-        // in case an url is passed in, use it to display the image
         return value;
       } else if (value) {
-        // in case a file is passed in, create a base64 url to display the image
         return URL.createObjectURL(value);
       }
       return null;
     }, [value]);
+
+    // Update dimensions when image loads
+    React.useEffect(() => {
+      if (imageRef.current) {
+        setDimensions({
+          width: imageRef.current.naturalWidth,
+          height: imageRef.current.naturalHeight,
+        });
+      }
+    }, [imageUrl]);
 
     // dropzone configuration
     const {
@@ -132,24 +137,18 @@ const SingleImageDropzone = React.forwardRef<HTMLInputElement, InputProps>(
         <div
           {...getRootProps({
             className: dropZoneClassName,
-            style: {
-              width,
-              height,
-            },
           })}
         >
-          {/* Main File Input */}
           <input ref={ref} {...getInputProps()} />
 
           {imageUrl ? (
-            // Image Preview
-            <Image
+            <img
+              ref={imageRef}
               className="h-full w-full rounded-md object-cover"
               src={imageUrl}
-              alt={acceptedFiles[0]?.name}
+              alt={acceptedFiles[0]?.name || "Uploaded image"}
             />
           ) : (
-            // Upload Icon
             <div className="flex flex-col items-center justify-center text-xs text-gray-400">
               <UploadCloudIcon className="mb-2 h-7 w-7" />
               <div className="text-gray-400">

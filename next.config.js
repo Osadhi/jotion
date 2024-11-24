@@ -1,16 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-  },
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
-};
+  transpilePackages: ['@blocknote/core', '@blocknote/react'],
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

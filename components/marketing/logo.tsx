@@ -21,7 +21,7 @@ export const Logo = () => {
         width="40"
         className="hidden dark:block"
       />
-      <p className={cn("font-semibold", font)}>Jotion</p>
+      <p className={cn("font-semibold", font)}>Nova</p>
     </div>
   );
 };
