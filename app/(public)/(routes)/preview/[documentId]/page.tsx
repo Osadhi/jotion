@@ -20,8 +20,9 @@ export default function DocumentIdPage() {
   // @ts-ignore
   const document = useQuery(api.documents.getById, { documentId: documentId });
   const update = useMutation(api.documents.update);
-  // @ts-ignore
+
   const onChange = (content: string) => {
+      // @ts-ignore
     update({ id: documentId, content });
   };
 
