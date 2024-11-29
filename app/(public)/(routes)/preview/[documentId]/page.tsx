@@ -22,7 +22,7 @@ export default function DocumentIdPage() {
   const update = useMutation(api.documents.update);
 
   const onChange = (content: string) => {
-      // @ts-ignore
+    // @ts-ignore
     update({ id: documentId, content });
   };
 
