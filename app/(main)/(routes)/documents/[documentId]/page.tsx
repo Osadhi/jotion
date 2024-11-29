@@ -7,12 +7,11 @@ import { Toolbar } from "@/components/toolbar";
 import { Cover } from "@/components/cover";
 import { useMemo } from "react";
 import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
+import { useParams  } from "next/navigation";
 
 
 export default function DocumentIdPage() {
-    const router = useRouter();
-    const documentId  =  router.query.documentId;
+    const {documentId} = useParams ();
   const Editor = useMemo(
       () => dynamic(() => import("@/components/editor"), { ssr: false }),
       []
