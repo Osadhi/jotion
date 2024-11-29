@@ -8,21 +8,22 @@ import { api } from "@/convex/_generated/api";
 import { Toolbar } from "@/components/toolbar";
 import { Cover } from "@/components/cover";
 import { Skeleton } from "@/components/ui/skeleton";
-import {useParams } from "next/navigation";
-
+import { useParams } from "next/navigation";
 
 export default function DocumentIdPage() {
-  const {documentId} = useParams ();
+  const { documentId } = useParams();
   const Editor = useMemo(
     () => dynamic(() => import("@/components/editor"), { ssr: false }),
     [],
   );
 
   // @ts-ignore
-  const document = useQuery(api.documents.getById, {documentId: documentId,});
+  const document = useQuery(api.documents.getById, { documentId: documentId });
   const update = useMutation(api.documents.update);
   // @ts-ignore
-  const onChange = (content: string) => {update({ id: documentId, content });};
+  const onChange = (content: string) => {
+    update({ id: documentId, content });
+  };
 
   if (document === undefined) {
     return (
